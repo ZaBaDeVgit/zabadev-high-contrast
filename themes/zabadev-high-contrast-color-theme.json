@@ -49,9 +49,22 @@
   },
   "tokenColors": [
     {
-      "scope": ["comment", "punctuation.definition.comment", "string.comment"],
-      "settings": {"foreground": "#777777", "fontStyle": "italic"}
+      "scope": [
+        "comment",
+        "comment.line",
+        "comment.block",
+        "comment.documentation",
+        "punctuation.definition.comment",
+        "string.comment",
+        "markup.comment",
+        "constant.other.comment"
+      ],
+      "settings": {
+        "foreground": "#87ee87",
+        "fontStyle": "italic"
+      }
     },
+
     {
       "scope": ["keyword", "storage.type", "storage.modifier"],
       "settings": {"foreground": "#FF0000", "fontStyle": "bold"}  // rojo neón
