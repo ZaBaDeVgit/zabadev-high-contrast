@@ -41,7 +41,11 @@
     "terminal.ansiBlue": "#00FFFF",
     "terminal.ansiMagenta": "#FF00FF",
     "terminal.ansiCyan": "#00FFFF",
-    "terminal.ansiWhite": "#FFFFFF"
+    "terminal.ansiWhite": "#FFFFFF",
+
+    "editorError.foreground": "#FF0000",
+    "editorWarning.foreground": "#FFAA00",
+    "editorInfo.foreground": "#00FFFF"
   },
   "tokenColors": [
     {
