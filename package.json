@@ -2,7 +2,7 @@
     "name": "zabadev-high-contrast-windsurf",
     "displayName": "ZabaDev High Contrast – Windsurf Edition",
     "description": "Tema oscuro de alto contraste con colores intensos (rojo, púrpura y verde) diseñado por ZabaDev para Windsurf y VS Code.",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publisher": "zabadev",
     "engines": {
       "vscode": "^1.90.0"
