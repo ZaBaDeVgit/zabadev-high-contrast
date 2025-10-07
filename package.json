@@ -1,32 +1,32 @@
 {
-    "name": "zabadev-high-contrast-windsurf",
-    "displayName": "ZabaDev High Contrast – Windsurf Edition",
-    "description": "Tema oscuro de alto contraste con colores intensos (rojo, púrpura y verde) diseñado por ZabaDev para Windsurf y VS Code.",
-    "version": "2.0.0",
-    "publisher": "zabadev",
-    "engines": {
-      "vscode": "^1.90.0"
-    },
-    "categories": [
-      "Themes"
-    ],
-    "icon": "icon.png",
-    "contributes": {
-      "themes": [
-        {
-          "label": "ZabaDev High Contrast – Windsurf Edition",
-          "uiTheme": "vs-dark",
-          "path": "./themes/zabadev-high-contrast-color-theme.json"
-        }
-      ]
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/zabadev/zabadev-high-contrast-windsurf"
-    },
-    "author": {
-      "name": "Juan José Zabala Ríos",
-      "email": "zabadev@example.com"
-    },
-    "license": "MIT"
-  }
+  "name": "zabadev-high-contrast-windsurf",
+  "displayName": "ZabaDev High Contrast – Windsurf Edition",
+  "description": "Tema oscuro de alto contraste con colores intensos (rojo, púrpura y verde) diseñado por ZabaDev para Windsurf y VS Code.",
+  "version": "2.0.1",
+  "publisher": "zabadev",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "icon": "icon.png",
+  "contributes": {
+    "themes": [
+      {
+        "label": "ZabaDev High Contrast – Windsurf Edition",
+        "uiTheme": "vs-dark",
+        "path": "./themes/zabadev-high-contrast-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zabadev/zabadev-high-contrast-windsurf"
+  },
+  "author": {
+    "name": "Juan José Zabala Ríos",
+    "email": "zabadev@example.com"
+  },
+  "license": "MIT"
+}
