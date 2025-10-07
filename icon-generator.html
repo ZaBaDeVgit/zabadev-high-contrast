@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Contrast Pro - Icon Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #000000;
+            color: #FFFFFF;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #00FFFF;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .subtitle {
+            color: #FFFFFF;
+            margin-bottom: 30px;
+        }
+        canvas {
+            border: 3px solid #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            background: #0080FF;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        button:hover {
+            background: #00A0FF;
+            box-shadow: 0 0 20px rgba(0, 128, 255, 0.8);
+        }
+        .info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #0A0A0A;
+            border: 2px solid #808080;
+            border-radius: 6px;
+            max-width: 500px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .colors {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .color-box {
+            width: 60px;
+            height: 30px;
+            border: 2px solid #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>⚡ HIGH CONTRAST PRO</h1>
+    <p class="subtitle">Maximum Contrast Icon - 128x128px</p>
+    <canvas id="iconCanvas" width="128" height="128"></canvas>
+    <div class="buttons">
+        <button onclick="downloadIcon()">⬇️ Descargar icon.png</button>
+        <button onclick="regenerateIcon()">🔄 Regenerar</button>
+    </div>
+    <div class="info">
+        <strong>TEMA DE ALTO CONTRASTE</strong><br>
+        Colores puros y máxima legibilidad<br><br>
+        <div class="colors">
+            <div class="color-box" style="background: #000000; color: #FFFFFF">BLACK</div>
+            <div class="color-box" style="background: #FFFFFF; color: #000000">WHITE</div>
+            <div class="color-box" style="background: #FF00FF; color: #000000">MAGENTA</div>
+            <div class="color-box" style="background: #00FFFF; color: #000000">CYAN</div>
+            <div class="color-box" style="background: #00FF00; color: #000000">GREEN</div>
+            <div class="color-box" style="background: #FFD700; color: #000000">GOLD</div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('iconCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function drawIcon() {
+            // Black background
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, 128, 128);
+
+            // White border
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.lineWidth = 4;
+            ctx.strokeRect(2, 2, 124, 124);
+
+            // Center circle with cyan glow
+            ctx.shadowBlur = 15;
+            ctx.shadowColor = '#00FFFF';
+
+            ctx.beginPath();
+            ctx.arc(64, 64, 40, 0, Math.PI * 2);
+            ctx.strokeStyle = '#00FFFF';
+            ctx.lineWidth = 5;
+            ctx.stroke();
+
+            ctx.shadowBlur = 0;
+
+            // "HC" letters in center
+            ctx.fillStyle = '#FFFFFF';
+            ctx.font = 'bold 36px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('HC', 64, 64);
+
+            // Corner accent triangles
+            const triangles = [
+                {x: 15, y: 15, color: '#FF00FF'},  // Top-left: Magenta
+                {x: 113, y: 15, color: '#00FF00'}, // Top-right: Green
+                {x: 15, y: 113, color: '#FFD700'}, // Bottom-left: Gold
+                {x: 113, y: 113, color: '#0080FF'} // Bottom-right: Blue
+            ];
+
+            triangles.forEach(t => {
+                ctx.beginPath();
+                if (t.x < 64 && t.y < 64) {
+                    // Top-left
+                    ctx.moveTo(t.x, t.y);
+                    ctx.lineTo(t.x + 15, t.y);
+                    ctx.lineTo(t.x, t.y + 15);
+                } else if (t.x > 64 && t.y < 64) {
+                    // Top-right
+                    ctx.moveTo(t.x, t.y);
+                    ctx.lineTo(t.x - 15, t.y);
+                    ctx.lineTo(t.x, t.y + 15);
+                } else if (t.x < 64 && t.y > 64) {
+                    // Bottom-left
+                    ctx.moveTo(t.x, t.y);
+                    ctx.lineTo(t.x + 15, t.y);
+                    ctx.lineTo(t.x, t.y - 15);
+                } else {
+                    // Bottom-right
+                    ctx.moveTo(t.x, t.y);
+                    ctx.lineTo(t.x - 15, t.y);
+                    ctx.lineTo(t.x, t.y - 15);
+                }
+                ctx.closePath();
+                ctx.fillStyle = t.color;
+                ctx.fill();
+                ctx.strokeStyle = '#FFFFFF';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            });
+
+            // Small accent circles at cardinal points
+            const circles = [
+                {x: 64, y: 15, color: '#00FFFF'},
+                {x: 113, y: 64, color: '#00FF00'},
+                {x: 64, y: 113, color: '#FFD700'},
+                {x: 15, y: 64, color: '#FF00FF'}
+            ];
+
+            circles.forEach(c => {
+                ctx.beginPath();
+                ctx.arc(c.x, c.y, 5, 0, Math.PI * 2);
+                ctx.fillStyle = c.color;
+                ctx.fill();
+                ctx.strokeStyle = '#FFFFFF';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            });
+        }
+
+        function regenerateIcon() {
+            ctx.clearRect(0, 0, 128, 128);
+            drawIcon();
+        }
+
+        function downloadIcon() {
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.download = 'icon.png';
+                link.href = url;
+                link.click();
+                URL.revokeObjectURL(url);
+            });
+        }
+
+        // Draw initial icon
+        drawIcon();
+    </script>
+</body>
+</html>
