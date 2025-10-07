@@ -1,12 +1,14 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "ZabaDev High Contrast – Neon Edition Full",
+  "name": "ZabaDev High Contrast – Neon Edition Improved",
   "type": "dark",
   "colors": {
     "editor.background": "#000000",
     "editor.foreground": "#FFFFFF",
-    "editor.lineHighlightBackground": "#111111",
-    "editor.selectionBackground": "#FFFF0066",
+    "editor.lineHighlightBackground": "#333300",       // línea resaltada muy visible
+    "editorLineNumber.foreground": "#FFFF00",           // números de línea neón amarillo
+    "editor.selectionBackground": "#FFFF0066",          // selección clásica
+    "editor.selectionHighlightBackground": "#FFFF33AA", // selección resaltada
     "editorCursor.foreground": "#00FF00",
     "editorWhitespace.foreground": "#333333",
 
@@ -48,55 +50,55 @@
     },
     {
       "scope": ["keyword", "storage.type", "storage.modifier"],
-      "settings": {"foreground": "#FF0000", "fontStyle": "bold"}
+      "settings": {"foreground": "#FF0000", "fontStyle": "bold"}  // rojo neón
     },
     {
       "scope": ["keyword.operator", "keyword.control", "constant.language"],
-      "settings": {"foreground": "#FFAA00"}
+      "settings": {"foreground": "#FFAA00"}  // amarillo neón
     },
     {
       "scope": ["variable", "entity.name.variable", "variable.parameter"],
-      "settings": {"foreground": "#00FF00"}
+      "settings": {"foreground": "#00FF00"}  // verde neón
     },
     {
       "scope": ["variable.other.readwrite", "variable.other.constant"],
-      "settings": {"foreground": "#00FFFF"}
+      "settings": {"foreground": "#FFFF00"}  // amarillo brillante
     },
     {
       "scope": ["constant.numeric", "number", "constant.character.escape"],
-      "settings": {"foreground": "#FFFF00"}
+      "settings": {"foreground": "#FF3300"}  // rojo neón
     },
     {
       "scope": ["string", "constant.other.symbol", "string.quoted"],
-      "settings": {"foreground": "#AA00FF"}
+      "settings": {"foreground": "#00FFFF"}  // cian neón
     },
     {
       "scope": ["function", "entity.name.function", "support.function", "meta.function-call"],
-      "settings": {"foreground": "#FF00FF", "fontStyle": "bold"}
+      "settings": {"foreground": "#FFAA00", "fontStyle": "bold"} // amarillo neón
     },
     {
       "scope": ["method", "entity.name.method"],
-      "settings": {"foreground": "#FF5500"}
+      "settings": {"foreground": "#FF0000"}  // rojo neón
     },
     {
       "scope": ["class", "entity.name.type.class", "support.class", "type"],
-      "settings": {"foreground": "#FFAAFF"}
+      "settings": {"foreground": "#FFFF00"}  // amarillo brillante
     },
     {
       "scope": ["interface", "entity.name.interface"],
-      "settings": {"foreground": "#00FFFF"}
+      "settings": {"foreground": "#00FFFF"}  // cian
     },
     {
       "scope": ["namespace", "entity.name.namespace"],
-      "settings": {"foreground": "#00AAFF"}
+      "settings": {"foreground": "#00AAFF"}  // azul neón
     },
     {
       "scope": ["property", "variable.other.property", "attribute.name"],
-      "settings": {"foreground": "#FFFF00"}
+      "settings": {"foreground": "#FFAA00"}  // amarillo
     },
     {
       "scope": ["decorator", "meta.decorator", "annotation"],
-      "settings": {"foreground": "#FF00AA"}
+      "settings": {"foreground": "#FF3300"}  // rojo neón
     },
     {
       "scope": ["punctuation", "meta.delimiter", "meta.brace"],
@@ -104,31 +106,31 @@
     },
     {
       "scope": ["invalid", "invalid.deprecated"],
-      "settings": {"foreground": "#FFFFFF", "background": "#FF0000", "fontStyle": "bold underline"}
+      "settings": {"foreground": "#FF0000", "fontStyle": "bold underline"}
     },
     {
       "scope": ["boolean", "constant.boolean"],
-      "settings": {"foreground": "#FFAA00"}
+      "settings": {"foreground": "#FFAA00"}  // amarillo
     },
     {
       "scope": ["conditional", "keyword.control.conditional"],
-      "settings": {"foreground": "#00FFFF", "fontStyle": "bold"}
+      "settings": {"foreground": "#00FFFF", "fontStyle": "bold"}  // cian neón
     },
     {
       "scope": ["loop", "keyword.control.loop"],
-      "settings": {"foreground": "#FF00FF", "fontStyle": "bold"}
+      "settings": {"foreground": "#FF0000", "fontStyle": "bold"}  // rojo neón
     },
     {
       "scope": ["tag", "entity.name.tag", "markup.heading"],
-      "settings": {"foreground": "#FFFF00"}
+      "settings": {"foreground": "#FFFF00"}  // amarillo neón
     },
     {
       "scope": ["attr-name", "entity.other.attribute-name"],
-      "settings": {"foreground": "#00FF00"}
+      "settings": {"foreground": "#00FF00"}  // verde neón
     },
     {
       "scope": ["markup.bold", "markup.italic"],
-      "settings": {"foreground": "#FFAAFF", "fontStyle": "bold"}
+      "settings": {"foreground": "#FFFF00", "fontStyle": "bold"} // amarillo
     }
   ]
 }
