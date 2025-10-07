@@ -1,6 +1,6 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "ZabaDev High Contrast – Windsurf Edition",
+  "name": "ZabaDev High Contrast – Windsurf Edition (High Color)",
   "type": "dark",
   "colors": {
     "editor.background": "#000000",
@@ -9,79 +9,119 @@
     "editor.selectionBackground": "#54007A66",
     "editorCursor.foreground": "#00FF9F",
     "editorWhitespace.foreground": "#222222",
+
     "activityBar.background": "#090909",
     "sideBar.background": "#0A0A0A",
     "statusBar.background": "#111111",
     "titleBar.activeBackground": "#0D0D0D",
+
     "button.background": "#FF006E",
     "button.hoverBackground": "#FF3380",
+
     "terminal.background": "#000000",
     "terminal.foreground": "#FFFFFF",
+    "terminal.ansiBlack": "#050505",
     "terminal.ansiRed": "#FF004C",
     "terminal.ansiGreen": "#00FF6A",
-    "terminal.ansiBlue": "#7A00FF",
     "terminal.ansiYellow": "#F5FF00",
+    "terminal.ansiBlue": "#7A00FF",
     "terminal.ansiMagenta": "#FF00A6",
     "terminal.ansiCyan": "#00FFF0",
-    "terminal.ansiWhite": "#EDEDED",
-    "terminal.ansiBlack": "#050505"
+    "terminal.ansiWhite": "#EDEDED"
   },
   "tokenColors": [
     {
-      "scope": ["comment", "punctuation.definition.comment"],
+      "scope": ["comment", "punctuation.definition.comment", "string.comment"],
       "settings": {
         "foreground": "#777777",
         "fontStyle": "italic"
       }
     },
     {
-      "scope": ["keyword", "storage.type"],
+      "scope": ["keyword", "storage.type", "storage.modifier"],
       "settings": {
         "foreground": "#FF006E",
         "fontStyle": "bold"
       }
     },
     {
-      "scope": ["variable", "entity.name.variable"],
+      "scope": ["keyword.operator", "keyword.control"],
+      "settings": {
+        "foreground": "#FF3380"
+      }
+    },
+    {
+      "scope": ["variable", "entity.name.variable", "variable.parameter"],
       "settings": {
         "foreground": "#00FF9F"
       }
     },
     {
-      "scope": ["string", "constant.other.symbol"],
+      "scope": ["variable.other.readwrite", "variable.other.constant"],
+      "settings": {
+        "foreground": "#00FF6A"
+      }
+    },
+    {
+      "scope": ["string", "constant.other.symbol", "string.quoted"],
       "settings": {
         "foreground": "#BA00FF"
       }
     },
     {
-      "scope": ["number", "constant.numeric"],
+      "scope": ["constant.numeric", "number", "constant.language", "constant.character.escape"],
       "settings": {
         "foreground": "#FFB300"
       }
     },
     {
-      "scope": ["function", "entity.name.function"],
+      "scope": ["function", "entity.name.function", "support.function", "meta.function-call"],
       "settings": {
         "foreground": "#00FFD1",
         "fontStyle": "bold"
       }
     },
     {
-      "scope": ["class", "entity.name.type.class", "support.class"],
+      "scope": ["method", "entity.name.method"],
+      "settings": {
+        "foreground": "#00D1FF"
+      }
+    },
+    {
+      "scope": ["class", "entity.name.type.class", "support.class", "type"],
       "settings": {
         "foreground": "#FF0055"
       }
     },
     {
-      "scope": ["constant", "entity.name.constant"],
+      "scope": ["interface", "entity.name.interface"],
       "settings": {
-        "foreground": "#00FF6A"
+        "foreground": "#FF55AA"
+      }
+    },
+    {
+      "scope": ["namespace", "entity.name.namespace"],
+      "settings": {
+        "foreground": "#00C0FF"
+      }
+    },
+    {
+      "scope": ["property", "variable.other.property"],
+      "settings": {
+        "foreground": "#FFD100"
+      }
+    },
+    {
+      "scope": ["punctuation", "meta.delimiter", "meta.brace"],
+      "settings": {
+        "foreground": "#E6E6E6"
       }
     },
     {
       "scope": ["invalid", "invalid.deprecated"],
       "settings": {
-        "foreground": "#FF0000",
+        "foreground": "#FFFFFF",
+        "background": "#FF0000",
         "fontStyle": "bold underline"
       }
     }
